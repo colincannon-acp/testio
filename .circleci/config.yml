@@ -1,15 +1,15 @@
 version: 2.1
 # Use a package of configuration called an orb.
-# orbs:
-  # Declare a dependency on the welcome-orb
-  # welcome: circleci/welcome-orb@0.4.1
+orbs:
+  Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
-# workflows:
-  # Name the workflow "welcome"
-  # welcome:
-    # Run the welcome/run job in its own container
-    # jobs:
-      # - welcome/run
+workflows:
+  Name the workflow "welcome"
+  welcome:
+    Run the welcome/run job in its own container
+    jobs:
+      - welcome/run
 
 jobs:
     build:
@@ -24,9 +24,9 @@ jobs:
                   key: v1-npm-deps-{{ checksum "package-lock.json" }}
                   paths:
                       - ./node_modules
-            # - run:
-                  # name: Build
-                  # command: npm build
+            - run:
+                  name: Build
+                  command: npm build
             - run:
                   name: Firebase Deploy
                   command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting
