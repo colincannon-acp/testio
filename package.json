@@ -1,0 +1,25 @@
+{
+  "name": "testio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "firebase": "^8.0.2"
+  },
+  "devDependencies": {
+    "firebase-tools": "^8.16.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colincannon-acp/testio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colincannon-acp/testio/issues"
+  },
+  "homepage": "https://github.com/colincannon-acp/testio#readme"
+}
